@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const userRouter = require("./route/userRoute");
 const app = express();
 dotenv.config();
 
@@ -19,6 +20,4 @@ mongoose
     console.log(error);
   });
 
-app.get("/", (req, res) => {
-  res.status(200).json({ Message: "Hello there" });
-});
+app.use(userRouter);
