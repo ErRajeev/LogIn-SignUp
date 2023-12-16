@@ -1,7 +1,6 @@
-// Login.js
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -16,14 +15,13 @@ const Login = () => {
         email,
         password,
       });
-      console.log("Response status code:", response.status);
       const result = response.data;
 
       if (response.status == 200) {
         console.log("Success");
         setSuccess(result.success);
         setTimeout(() => {
-          navigate("/");
+          navigate("/act");
         }, 2000);
       } else {
         console.log("Failed to login");

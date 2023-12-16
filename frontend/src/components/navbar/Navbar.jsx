@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -42,7 +41,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/all" className="nav-link">
+                <Link to="/act" className="nav-link">
                   Active Users
                 </Link>
               </li>
