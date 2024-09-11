@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 const SignUp = () => {
@@ -93,6 +93,9 @@ const SignUp = () => {
       <button className="btn btn-primary" onClick={handleRegister}>
         Register
       </button>
+      <Link to="/login" className="p-5">
+        <button className="btn btn-primary "> Login </button>
+      </Link>
       {message && <p className="mt-3">{message}</p>}
       {showOtpInput && (
         <div className="mb-3">
